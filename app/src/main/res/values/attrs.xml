@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="rpb_radius" format="dimension" />
+        <attr name="rpb_thickness" format="dimension" />
+        <attr name="rpb_gap" format="dimension" />
+        <attr name="rpb_count" format="integer" />
+        <attr name="rpb_sweep_angle" format="float" />
+        <attr name="rpb_colors" format="reference" />
+        <attr name="rpb_duration" format="integer" />
+        <attr name="rpb_interpolator" format="string" />
+    </declare-styleable>
+
+</resources>

@@ -1,43 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ru.rage.progressbars.round.RoundProgressBar
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:rpb_colors="@array/colors"
-        app:rpb_count="10"
-        app:rpb_gap="10dp"
-        app:rpb_interpolator="@string/progressive_interpolator"
-        app:rpb_radius="20dp"
-        app:rpb_sweep_angle="90"
-        app:rpb_thickness="2dp" />
-
-    <Button
-        android:id="@+id/progressive"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Progressive" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Linear" />
+        <ru.rage.progressbars.round.RoundProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:rpb_colors="@array/colors"
+            app:rpb_count="14"
+            app:rpb_gap="10dp"
+            app:rpb_interpolator="@string/progressive_interpolator"
+            app:rpb_radius="20dp"
+            app:rpb_sweep_angle="90"
+            app:rpb_thickness="2dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/progressive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Progressive" />
+
+        <Button
+            android:id="@+id/reverse_progressive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Reverse progressive" />
+
+        <Button
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Linear" />
+
+    </LinearLayout>
+
+</ScrollView>

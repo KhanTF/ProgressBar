@@ -2,6 +2,7 @@
     <string name="app_name">ProgressBars</string>
 
     <string name="progressive_interpolator">ru.rage.progressbars.round.ProgressiveInterpolator</string>
-    <string name="linear_interpolator">ru.rage.progressbars.round.LinearInterpolator</string>
+    <string name="linear_interpolator">ru.rage.progressbars.round.LinearInterpolator</string>ReverseProgressiveInterpolator
+    <string name="reverse_progressive_interpolator">ru.rage.progressbars.round.ReverseProgressiveInterpolator</string>
 
 </resources>

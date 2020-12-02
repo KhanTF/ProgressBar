@@ -64,12 +64,12 @@ class RoundProgressBar @JvmOverloads constructor(context: Context, attrs: Attrib
         animator.duration = (typedArray?.getInt(R.styleable.RoundProgressBar_rpb_duration, DEFAULT_DURATION) ?: DEFAULT_DURATION).toLong()
         animator.repeatCount = ValueAnimator.INFINITE
         animator.interpolator = LinearInterpolator()
+        animator.addUpdateListener(animatorUpdateListener)
         typedArray?.recycle()
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        animator.addUpdateListener(animatorUpdateListener)
         animator.start()
     }
 
@@ -118,9 +118,17 @@ class RoundProgressBar @JvmOverloads constructor(context: Context, attrs: Attrib
         }
     }
 
+    override fun onVisibilityChanged(changedView: View, visibility: Int) {
+        super.onVisibilityChanged(changedView, visibility)
+        if (visibility == VISIBLE) {
+            animator.resume()
+        } else {
+            animator.pause()
+        }
+    }
+
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
-        animator.removeUpdateListener(animatorUpdateListener)
         animator.cancel()
     }
 
